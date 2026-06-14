@@ -22,8 +22,7 @@ class StudentManager:
     def search_student(self,student_id):
        for student in self.students:
           if student.student_id == student_id:
-             return student
-          
+             return student   
        return None 
      
     # update student

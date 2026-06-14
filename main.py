@@ -1,6 +1,7 @@
 from student import Student
 from studentmanager import StudentManager
 
+
 manager = StudentManager()
 
 manager.load_file()

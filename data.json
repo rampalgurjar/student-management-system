@@ -1,0 +1,29 @@
+[
+    {
+        "student_id": 1,
+        "name": "Rampal",
+        "age": 20,
+        "course": "Btech",
+        "marks": [
+            23,
+            45,
+            23
+        ],
+        "average": 30.333333333333332,
+        "grade": "Fail"
+    },
+    {
+        "student_id": 2,
+        "name": "ankit",
+        "age": 19,
+        "course": "Btech",
+        "marks": [
+            34,
+            23,
+            24,
+            54
+        ],
+        "average": 33.75,
+        "grade": "Fail"
+    }
+]

@@ -1,7 +1,6 @@
 from student import Student
 from studentmanager import StudentManager
 
-
 manager = StudentManager()
 
 manager.load_file()
@@ -18,7 +17,6 @@ while True:
     choice = int(input("Enter Your choice: "))
     # add student
     if choice == 1:
-        student_id = int(input("Enter Student Id : "))
         name = input("Enter the student Name : ")
         age = int(input("Enter the Student Age : "))
         course = input("Enter the course name : ")
@@ -31,6 +29,8 @@ while True:
             mark = int(input(f"Enter subject {i+1} marks : "))
             marks.append(mark)
 
+        student_id = manager.generate_id()    
+
 
         student = Student(
                 student_id,
@@ -39,9 +39,13 @@ while True:
                 course,
                 marks
                  )
-
-        manager.add_student(student)
-        print("Student Added Successfully!")    
+        
+        result = manager.add_student(student)
+        if result:
+          print("Student Added Successfully!")    
+        else:
+            print("Student ID Already Exists!")    
+        
 
     # view student
     elif choice == 2:

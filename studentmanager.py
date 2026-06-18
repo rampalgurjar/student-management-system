@@ -7,7 +7,12 @@ class StudentManager:
 
     # Add student
     def add_student(self,student):
+        old_student = self.search_student(student.student_id)
+        if old_student:
+           return False
+        
         self.students.append(student)
+        return True
 
    # view student 
     def view_student(self):
@@ -22,7 +27,8 @@ class StudentManager:
     def search_student(self,student_id):
        for student in self.students:
           if student.student_id == student_id:
-             return student   
+             return student
+          
        return None 
      
     # update student
@@ -77,6 +83,19 @@ class StudentManager:
       except FileNotFoundError:
         print("No previous data found.")
 
+   
+    def generate_id(self):
+
+      if not self.students:
+        return 1
+
+      max_id = 0
+
+      for student in self.students:
+        if student.student_id > max_id:
+            max_id = student.student_id
+
+      return max_id + 1 
 
     
 

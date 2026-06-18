@@ -6,7 +6,6 @@ class Student:
         self.age = age
         self.course = course
         self.marks = marks
-        
     # find average
     def calculate_average(self):
         total =0
@@ -15,7 +14,6 @@ class Student:
 
         average = total /len(self.marks)
         return average
-        
     # Calculate grade
     def calculate_grade(self):
         avg = self.calculate_average()
@@ -28,6 +26,8 @@ class Student:
             return("C")
         elif 60 <= avg < 70:
             return("D")
+        elif 50 <= avg < 60:
+            return("E")
         else:
             return("Fail")  
 

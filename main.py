@@ -6,7 +6,7 @@ manager = StudentManager()
 manager.load_file()
 
 while True:
-    print("========STUDENT MANAGEMENT SYSTEM===========")
+    print("=========STUDENT MANAGEMENT SYSTEM===========")
     print("1) Add Student")
     print("2) View Student")
     print("3) Search Stuent")
